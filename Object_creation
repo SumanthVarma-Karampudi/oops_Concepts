@@ -1,0 +1,43 @@
+/*
+-->object creation, getter and setters.
+-->student s1;  - Normal object is created , a block of memory is allocated in the stack memory
+-->student *s2=new student; - We created the object dynamically, here student block of memory is allocated in heap memory
+and 8 bytes of memory for the object pointer in the stack memory.
+
+*/
+
+#include<iostream>
+using namespace std;
+class Student{
+ //private:        //by default Access modifier is private even if we don't specify
+ public:           //We can't directly access the data members in private access modifier so declaring them in public.
+  int rollnumber;
+
+ private:
+     int age;
+
+ public:
+    void display(){
+        cout<<age<<" "<<rollnumber<<endl;
+    }
+
+    int getage(){
+        return age;      //private data members can be accessed by the public members inside the class
+    }
+
+    void setage(int age){
+        this->age=age;
+    }
+};
+int main(){
+ Student s1;
+ Student *s2=new Student;
+ s1.setage(24);            // s1.age=21;   gives errors because age is private data member so we are using getters
+ s1.rollnumber=1;
+
+ (*s2).setage(24);
+ (*s2).rollnumber=2;
+       //or             For dynamically created objects (*s.age) or (s->age)
+ s2->setage(24);
+ s2->rollnumber=2;
+}
