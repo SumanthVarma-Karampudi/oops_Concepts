@@ -1,8 +1,8 @@
 /*
--->object creation, getter and setters.
--->student s1;  - Normal object is created , a block of memory is allocated in the stack memory
--->student *s2=new student; - We created the object dynamically, here student block of memory is allocated in heap memory
-and 8 bytes of memory for the object pointer in the stack memory.
+object creation, getter and setters.
+-->student s1;                       - Normal object is created , a block of memory is allocated in the stack memory
+-->student *s2=new student;          - We created the object dynamically, here for the statement (new student, new is a keyword for dynamic memory allocation) 
+                                       block of memory is allocated in heap memory and 8 bytes of memory for the object pointer in the stack memory.
 
 */
 
